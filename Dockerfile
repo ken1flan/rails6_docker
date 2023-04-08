@@ -1,7 +1,6 @@
 FROM ruby:3.0.5
 
-# RUN apt-get update -qq && apt-get install -y nodejs mysql-client
-RUN apt-get update -qq && apt-get install -y nodejs
+RUN apt-get update -qq && apt-get install -y nodejs npm && npm install -g yarn
 
 WORKDIR /app
 COPY Gemfile Gemfile.lock /app/
